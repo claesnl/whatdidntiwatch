@@ -16,11 +16,14 @@
 #
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
-
+import urllib
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
-        self.response.out.write('TO BE IMPLEMENTED')
+		f = urllib.urlopen("http://en.wikipedia.org/wiki/List_of_House_episodes")
+		s = f.read()
+		f.close()
+		self.response.out.write('TO BE IMPLEMENTED')
 
 
 def main():
