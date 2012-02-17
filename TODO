@@ -1,0 +1,12 @@
+REGEX HTML SCRAPER OF IMDB:
+	- Get all the contents between 
+			<div class="list_item (.*)">   			<-- (.*) is either "odd" or "even"
+	  and
+			<div class="clear">&nbsp;</div></div>
+	
+	- From each of these get:
+		* Episode number
+		* Airdate
+		* Title
+		* Description
+		* Image link

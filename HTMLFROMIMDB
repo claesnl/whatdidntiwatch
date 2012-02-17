@@ -1,0 +1,97 @@
+<div class="list_item odd">
+	<div class="image">
+		<a onclick="(new Image()).src='/rg/episodes/image-15/images/b.gif?link=/title/tt2216757/';" href="/title/tt2216757/" title="The Burning Beekeeper" itemprop="url"> 		
+			<div data-const="tt2216757" class="hover-over-image zero-z-index no-ep-poster" style="position:relative">
+				<img width="120" class="zero-z-index" alt="The Burning Beekeeper" src="/images/nopicture/120x90/tv.png">
+				<div>S7, Ep15</div>
+			</div>
+		</a>
+	</div>
+  	<div class="info" itemprop="episodes" itemscope itemtype="http://schema.org/TVEpisode">
+    	<meta itemprop="episodeNumber" content="15"/>
+    	<div class="airdate">
+      		Feb. 6, 2012
+    	</div>
+    	<strong>
+			<a onclick="(new Image()).src='{URL DELETED BY CLAES}';" href="/title/tt2216757/" title="The Burning Beekeeper" itemprop="name">
+				The Burning Beekeeper
+			</a>
+		</strong>
+    	<div class="item_description" itemprop="description">
+			Lily and Marshall throw a housewarming party, where Ted nearly comes to blows with Marshall's boss, and Barney hits on a crazy divorcee.
+		</div>
+    	<div class="popoverContainer">
+  			<div class="watchInfo">
+    			<label><span>Watch now</span></label>
+  				<div class="watchIcon">
+					<img src="/images/video/provider_logos/amazon.gif" />
+				</div>
+  			</div>
+  			<div class="htwPopover">
+    			<div class="popoverClose touch"></div>
+    			<h5>Watch now</h5>
+    			<div class="watchOptionList">
+        			<div class="watchOption">
+						<a onclick="(new Image()).src='{URL DELETED BY CLAES}';" href="/video/amazon/vi791978265/offsite" target="_blank">
+							<div class="watchIcon">
+								<img src="/images/video/provider_logos/amazon.gif" />
+							</div>
+							Watch on Amazon
+						</a>
+					</div>
+    			</div>
+  			</div>
+    	</div>
+    	<div class="popoverContainer"></div>
+  	</div>
+	<div class="clear">&nbsp;</div>        
+</div>
+
+====================
+
+<div class="list_item even">
+	<div class="image">
+		<a onclick="(new Image()).src='/rg/episodes/image-16/images/b.gif?link=/title/tt2216759/';" href="/title/tt2216759/" title="The Drunk Train" itemprop="url">
+			<div data-const="tt2216759" class="hover-over-image zero-z-index " style="position:relative">
+				<img width="120" class="zero-z-index" alt="The Drunk Train" src="{URL DELETED BY CLAES}">
+				<div>S7, Ep16</div>
+			</div>
+		</a>
+	</div>
+  	<div class="info" itemprop="episodes" itemscope itemtype="http://schema.org/TVEpisode">
+    	<meta itemprop="episodeNumber" content="16"/>
+    	<div class="airdate">
+      		Feb. 13, 2012
+    	</div>
+    	<strong>
+			<a onclick="(new Image()).src='{URL DELETED BY CLAES}';" href="/title/tt2216759/" title="The Drunk Train" itemprop="name">
+				The Drunk Train
+			</a>
+		</strong>
+    	<div class="item_description" itemprop="description">
+			Kevin proposes to Robin, but will he take it back when Robin {REST DELETED BY CLAES}
+		</div>
+    	<div class="popoverContainer">
+  			<div class="watchInfo">
+    			<label><span>Watch now</span></label>
+  				<div class="watchIcon"><img src="/images/video/provider_logos/amazon.gif" /></div>
+  			</div>
+  			<div class="htwPopover">
+    			<div class="popoverClose touch"></div>
+    			<h5>Watch now</h5>
+    			<div class="watchOptionList">
+        			<div class="watchOption">
+						<a onclick="(new Image()).src='{URL DELETED BY CLAES}';" href="/video/amazon/vi791519513/offsite" target="_blank">
+							<div class="watchIcon">
+								<img src="/images/video/provider_logos/amazon.gif" />
+							</div>
+							Watch on Amazon
+						</a>
+					</div>
+    			</div>
+  			</div>
+    	</div>
+    	<div class="popoverContainer"></div>
+	</div>
+	<div class="clear">&nbsp;</div>        
+</div>
