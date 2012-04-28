@@ -1,15 +1,49 @@
 #!/usr/bin/env python
+from google.appengine.api import users
+import datetime
+from google.appengine.ext import db
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
 import urllib
+import cgi
 from BeautifulSoup import BeautifulSoup
 from google.appengine.ext.webapp import template
 
-# bySeason
+class Subscriptions(db.Model):
+    account = db.UserProperty()
+    tvid = db.StringProperty(required=True)
+    last_seen_season = db.IntegerProperty(required=True)
+    last_seen_episode = db.IntegerProperty(required=True)
+
+class NewSeason(webapp.RequestHandler):
+    def post(self):
+        series = cgi.escape(self.request.get('series'))
+        f = urllib.urlopen("http://www.imdbapi.com/?i=&t="+series)
+        q = f.read()
+        qq = q.split(':')
+        qqq = qq[1].split(",")
+        self.response.out.write(qqq[0])
+        s = Subscriptions(account=users.get_current_user(),
+                          tvid="123",
+                          last_seen_season=1,
+                          last_seen_episode=0)
+        #s.put()
 
 class MainHandler(webapp.RequestHandler):
     def get(self):
-		self.response.out.write("""<a href="/tvshow">Select from list of known series</a>""")
+        user = users.get_current_user()
+        if user:
+            subscriptions = Subscriptions.all()
+            subscriptions.filter("account =", user)
+            options = {
+               'nickname'  : user.nickname() ,
+               'logouturl' : users.create_logout_url("/") ,
+               'series'    : subscriptions
+            }
+            self.response.out.write(template.render('welcome.html', options))
+        else:
+            greeting = ("<a href=\"%s\">Sign in or register</a>." % users.create_login_url("/"))
+            self.response.out.write("<html><body>%s</body></html>" % greeting)
 
 class KnownSeriesSelector(webapp.RequestHandler):
     def get(self):
@@ -54,7 +88,8 @@ def main():
     application = webapp.WSGIApplication([('/', MainHandler),
 										  ('/tvshow/(.*)/season/(.*)',SeasonHandler),
 										  ('/tvshow/(.*)',TVShowHandler),
-										  ('/tvshow',KnownSeriesSelector)],
+										  ('/tvshow',KnownSeriesSelector),
+										  ('/newseason',NewSeason)],
                                          debug=True)
     util.run_wsgi_app(application)
 

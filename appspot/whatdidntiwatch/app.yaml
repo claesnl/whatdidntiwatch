@@ -9,4 +9,6 @@ handlers:
   upload: favicon\.ico
 
 - url: .*
+  login: required
+  secure: always
   script: main.py
